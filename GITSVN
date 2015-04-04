@@ -3,10 +3,6 @@ we will use quite often
 
 # Sync the subtree with the remote branch
 
-`git fetch click_php master:click_php`
-
-Pull in the latest additions from the remote
-
 `git merge --squash -s subtree --no-commit click_php/master`
 
 Merge our local branch with the remote subtree
