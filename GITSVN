@@ -1,0 +1,32 @@
+In order to push this plugin to it's subversion repository, there's a couple commands
+we will use quite often
+
+# Sync the subtree with the remote branch
+
+`git fetch click_php master:click_php`
+
+Pull in the latest additions from the remote
+
+`git merge --squash -s subtree --no-commit click_php/master`
+
+Merge our local branch with the remote subtree
+
+# Pushing commits to the SVN repository
+
+`git svn rebase`
+
+Sync the current branch with any commits on subversion.
+
+`git svn dcommit`
+
+Loop through all the GIT commits and add SVN copies
+
+# Tag a new subversion release
+
+`git tag -a $1 -m "tagging $1"`
+
+Create the new tag in GIT
+
+`git svn tag "$1"`
+
+Create a new subversion tag
