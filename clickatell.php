@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Clickatell OTP
-Plugin URI: http://arcturial.github.com
+Plugin Name: Clickatell Two-Factor Authentication
+Plugin URI: https://github.com/arcturial/clickatell-wordpress
 Description: Two-Factor Authentication using the Clickatell SMS gateway
 Author: Chris Brand
-Version: 1.0
+Version: 1.1
 Author URI: http://github.com/arcturial
 */
 
