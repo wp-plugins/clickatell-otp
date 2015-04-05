@@ -27,6 +27,19 @@ function click_conf_api_token()
 }
 
 /**
+ * Render the Message Format field.
+ *
+ * @return void
+ */
+function click_conf_message()
+{
+    echo '<label for="' . CFIELD_MESSAGE . '">';
+    echo '<textarea cols="30" rows="2" id="' . CFIELD_MESSAGE . '" name="' . CFIELD_MESSAGE .'" placeholder="' . CMESSAGE_FORMAT . '">' . get_option(CFIELD_MESSAGE) . '</textarea>';
+    echo '</label>';
+    echo '<p class="description">The character %s will be replaced by the PIN.</p>';
+}
+
+/**
  * Render the checkbox fields.
  *
  * @return void
@@ -56,9 +69,11 @@ function click_conf()
 {
     add_settings_section(CCONF_SECTION, 'Clickatell Configuration', 'click_conf_info', 'general');
     add_settings_field(CFIELD_API_TOKEN, 'API Token', 'click_conf_api_token', 'general', CCONF_SECTION);
+    add_settings_field(CFIELD_MESSAGE, 'Message Format', 'click_conf_message', 'general', CCONF_SECTION);
     add_settings_field(CFIELD_SETTINGS, 'Settings', 'click_conf_settings', 'general', CCONF_SECTION);
 
     register_setting('general', CFIELD_API_TOKEN, 'esc_attr');
+    register_setting('general', CFIELD_MESSAGE, 'esc_attr');
     register_setting('general', CFIELD_MSG_LOG, 'esc_attr');
     register_setting('general', CFIELD_TWO_FACTOR, 'esc_attr');
 }

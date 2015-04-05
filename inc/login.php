@@ -50,7 +50,13 @@ function click_send_otp($number, $user)
 {
     try
     {
-        $id = get_library_otp()->sendPin($number, $user);
+        $message = get_option(CFIELD_MESSAGE);
+        $message = strlen($message) ? $message : CMESSAGE_FORMAT;
+
+        $otp = get_library_otp();
+        $otp->setMessage($message);
+
+        $id = $otp->sendPin($number, $user);
         log_message($number, $id);
         return true;
     }

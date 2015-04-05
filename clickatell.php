@@ -12,9 +12,13 @@ define('CCONF_SECTION', 'click_conf_section');
 define('CFIELD_API_TOKEN', 'click_api_token');
 define('CFIELD_SETTINGS', 'click_settings');
 define('CFIELD_TWO_FACTOR', 'click_two_factor');
+define('CFIELD_MESSAGE', 'click_message');
 define('CFIELD_MSG_LOG', 'click_message_log');
 define('CFIELD_OTP', 'otp_number');
 define('CLOG_FORMAT', 'message.%s.log');
+
+// Default message format
+define('CMESSAGE_FORMAT', get_bloginfo('name') . ' >> Your verification code is %s');
 
 spl_autoload_register(function ($class) {
     $class = str_replace("\\", "/", $class);
