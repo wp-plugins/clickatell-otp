@@ -12,7 +12,7 @@ Secure your site with Two-Factor Authentication (TFA) using the Clickatell SMS g
 
 == Description ==
 
-[Two-Factor Authentication](http://en.wikipedia.org/wiki/Two_factor_authentication) adds a second step to your login that verfies the identify of a user. When authenticating, the user will receive a SMS/text containing a PIN. The PIN will have to be entered correctly before login can proceed. By doing this, we verify that it's the person in charge of the account trying to authenticate.
+[Two-Factor Authentication](http://en.wikipedia.org/wiki/Two_factor_authentication) adds a second step to your login that verifies the identify of a user. When authenticating, the user will receive a SMS/text containing a PIN. The PIN will have to be entered correctly before login can proceed. By doing this, we verify that it's the person in charge of the account trying to authenticate.
 
 = What does it do? =
 
